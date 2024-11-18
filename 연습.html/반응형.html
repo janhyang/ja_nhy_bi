@@ -1,0 +1,45 @@
+<!--1. 간단한 데스크톱 전용 HTML (뷰포트 태그 없음)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>테이블</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>제목</th>
+      <td>내용</td>
+    </tr>
+  </table>
+</body>
+</html>
+<br>
+
+<!--2. 반응형 웹을 고려한 HTML (뷰포트 태그 포함-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 테이블</title>
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #000; padding: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>제목</th>
+      <td>내용</td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+<p lang="en">Hello!</p>
+<p lang="ko">안녕하세요!</p>

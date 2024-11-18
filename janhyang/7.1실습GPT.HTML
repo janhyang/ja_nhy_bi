@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Interactive Effects</title>
+    <style>
+        form {
+            width: 400px;
+        }
+
+        /* 제목 기본 스타일 */
+        h3 {
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* 제목에 마우스를 올렸을 때 스타일 */
+        h3:hover {
+            background-color: #f8d7da; /* 배경색 */
+            color: #721c24; /* 글자색 */
+        }
+
+        /* 텍스트 입력 영역 기본 스타일 */
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 버튼 기본 스타일 */
+        button {
+            float: right;
+            padding: 5px 15px;
+            background-color: #f96666; /* 버튼 배경색 */
+            color: white; /* 버튼 텍스트 색상 */
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* 버튼 호버 상태 제거 */
+        button:hover {
+            background-color: #f96666; /* 호버 시 배경색 그대로 유지 */
+            color: white; /* 호버 시 글자색 그대로 유지 */
+        }
+
+        /* 버튼 클릭 상태 */
+        button:active {
+            background-color: #e0e0e0; /* 클릭 시 배경색을 연한 회색으로 변경 */
+            color: #f96666; /* 클릭 시 글자 색상을 #f96666으로 변경 */
+        }
+
+        /* 체크박스 스타일 */
+        .checkbox-container label {
+            margin-right: 10px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* 체크박스가 선택된 경우의 배경색 */
+        .checkbox-container input[type="checkbox"]:checked + label {
+            color: white;
+        }
+
+        /* 체크박스가 선택된 경우 색상 변경 */
+        .checkbox-container input[type="checkbox"]#red:checked + label {
+            background-color: #f96666; /* 빨강 */
+        }
+
+        .checkbox-container input[type="checkbox"]#blue:checked + label {
+            background-color: #007bff; /* 파랑 */
+        }
+
+        .checkbox-container input[type="checkbox"]#yellow:checked + label {
+            background-color: #ffcc00; /* 노랑 */
+        }
+
+        /* 텍스트 영역 활성화(포커스) 상태 */
+        textarea:focus {
+            background-color: #fce4e4; /* 포커스 시 배경색 */
+        }
+
+    </style>
+</head>
+<body>
+
+<h3>건의 사항을 적어주세요!</h3>
+<form>
+    <textarea placeholder="건의 사항 🖊"></textarea>
+    <div class="checkbox-container">
+        <input type="checkbox" id="red" name="red">
+        <label for="red">빨강</label>
+        <input type="checkbox" id="blue" name="blue">
+        <label for="blue">파랑</label>
+        <input type="checkbox" id="yellow" name="yellow">
+        <label for="yellow">노랑</label>
+    </div>
+    <button type="submit">제출</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Checkbox Color Change</title>
+    <style>
+        form {
+            width: 400px;
+        }
+
+        /* 제목 기본 스타일 */
+        h3 {
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* 제목에 마우스를 올렸을 때 스타일 */
+        h3:hover {
+            background-color: #f8d7da; /* 배경색 */
+            color: #721c24; /* 글자색 */
+        }
+
+        /* 텍스트 입력 영역 기본 스타일 */
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 버튼 기본 스타일 */
+        button {
+            float: right;
+            padding: 5px 15px;
+            background-color: #f96666; /* 버튼 배경색 */
+            color: white; /* 버튼 텍스트 색상 */
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* 버튼 호버 상태 */
+        button:hover {
+            background-color: #555; /* 호버 시 배경색 */
+            color: white; /* 호버 시 글자색은 그대로 유지 */
+        }
+
+        /* 버튼 클릭 상태 */
+        button:active {
+            background-color: #e0e0e0; /* 클릭 시 배경색을 연한 회색으로 변경 */
+            color: #f96666; /* 클릭 시 글자 색상을 #f96666으로 변경 */
+        }
+
+        /* 체크박스 스타일 */
+        .checkbox-container label {
+            margin-right: 10px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* 체크박스가 선택된 경우의 배경색 */
+        #red:checked + label[for="red"] {
+            background-color: #ffcccc; /* 빨강 체크 시 배경색 */
+            color: #c21807; /* 글자색 */
+        }
+
+        #blue:checked + label[for="blue"] {
+            background-color: #cce5ff; /* 파랑 체크 시 배경색 */
+            color: #004085; /* 글자색 */
+        }
+
+        #yellow:checked + label[for="yellow"] {
+            background-color: #fff3cd; /* 노랑 체크 시 배경색 */
+            color: #856404; /* 글자색 */
+        }
+
+        /* 텍스트 영역 활성화(포커스) 상태 */
+        textarea:focus {
+            background-color: #fce4e4; /* 포커스 시 배경색 */
+        }
+
+        /* 버튼 클릭 시 텍스트 입력란 색상 변경 */
+        .active-textarea {
+            background-color: #ffe6e6; /* 클릭 시 텍스트 영역 배경색 */
+        }
+    </style>
+</head>
+<body>
+
+<h3 id="title">건의 사항을 적어주세요!</h3>
+<form>
+    <textarea id="feedback" placeholder="건의 사항 🖊"></textarea>
+    <div class="checkbox-container">
+        <input type="checkbox" id="red" name="red">
+        <label for="red">빨강</label>
+        <input type="checkbox" id="blue" name="blue">
+        <label for="blue">파랑</label>
+        <input type="checkbox" id="yellow" name="yellow">
+        <label for="yellow">노랑</label>
+    </div>
+    <button type="button" id="submitBtn">제출</button>
+</form>
+
+<script>
+    // 버튼 클릭 시 텍스트 입력란 배경색 변경 및 버튼 색상만 변경
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        var textarea = document.getElementById('feedback');
+        var submitBtn = document.getElementById('submitBtn');
+        
+        // 텍스트 입력란 배경색 변경
+        textarea.classList.add('active-textarea');
+        setTimeout(function() {
+            textarea.classList.remove('active-textarea');
+        }, 500);
+
+        // 버튼 클릭 시 색상 변경 (텍스트는 #f96666, 배경은 연한 회색)
+        submitBtn.style.backgroundColor = '#e0e0e0'; // 연한 회색 배경색
+        submitBtn.style.color = '#f96666'; // 글자 색상 #f96666
+        setTimeout(function() {
+            submitBtn.style.backgroundColor = '#f96666'; // 원래 배경색으로 복구
+            submitBtn.style.color = 'white'; // 원래 글자색으로 복구
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>
