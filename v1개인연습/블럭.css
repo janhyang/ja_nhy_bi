@@ -1,0 +1,30 @@
+.orange {
+    
+    background-color: orange;
+
+    height: 200px;
+  }
+
+  .skyblue{
+    display: inline-block;
+    background-color: skyblue;
+    width: 200px;
+    height: 100px;
+   
+
+  }
+
+  .green{
+    display: inline-block;
+    background-color: green;
+    width: 200px;
+    height: 100px;
+
+  }
+
+  .red{
+    display: inline-block;
+    background-color: red;
+    width: 200px;
+    height: 100px;
+  }

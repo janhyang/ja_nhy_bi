@@ -1,0 +1,58 @@
+.circle {
+    
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    background: linear-gradient(red,orange);
+    
+    position: relative;
+
+    border-radius: 50px;
+    border: top left radius 50px;;
+
+    animation-name: janhyang;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:inherit;
+
+    animation-play-state: running;
+
+    left: 700px;
+   
+}
+
+/* damon : 애니메이션의 이름 (개발자 마음대로) */
+@keyframes janhyang {
+
+    
+
+
+    0% { 
+        left:0px; 
+        top: 0px;
+    }
+    
+
+    25% {
+        left: calc(100vw - 100px);
+        top: calc(100vh- 100px);
+    }
+
+    50% {
+       top: calc(100vh- 100px);
+       left: calc(100vw- 100px)
+    }
+
+    75% {
+        right: calc(100vw- 100px);
+        bottom: calc(100vw- 100px);
+    }
+
+    100% {
+        top: calc(100vw- 100px);
+    }
+}
+
+

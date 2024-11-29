@@ -15,6 +15,7 @@
         => 위 두가지 속성은 "서버" 연관된 내용 -> 지금 당장은 의미가 없음!
     -->
     <form action="">
+    <form action="/submit" method="POST"></form>
       <!-- 
             form 요소: 폼 태그 안에 있는 사용자의 입력값을 받는 요소
             input, textarea, select ... 태그들에는 name 속성을 가질 수 있습니다.
@@ -123,5 +124,45 @@
       <button>버튼1</button>
     </form>
     <button>버튼2</button>
+    
+    <br> <br> <br>
+    <hr>
+
+
+    <h2>설문조사</h2>
+    이름<input type="text" autofocus /> <br>
+    <label for="name" >이름  </label>
+    <input type="text" id="name">
+
+  
+  
+    <label for="user-email">이메일</label>
+    <input type="email" id="user-email"
+    placeholder="loveisall@gmail.com"/>
+
+    <h2>나이</h2>
+    <input type="radio" name="age"   id="10대"/><label for="10대"></label>10대</input>
+    <input type="radio" name="age"   id="20대"/><label for="10대"></label>20대</input>
+    <input type="radio" name="age"   id="30대"/><label for="10대"></label>30대</input>
+    <input type="radio" name="age"   id="40대"/><label for="10대"></label>40대</input>
+    <input type="radio" name="age"   id="50대"/><label for="10대"></label>50대</input>
+    <input type="radio" name="age"   id="60대 이상"/><label for="10대"></label>60대 이상</input>
+    
+
+    <h2>원하는강의(복수응답가능합니다.)</h2>
+
+    <input type="checkbox" name="interest" id="html"><label for="html"></label>html</input>
+    <input type="checkbox" name="interest" id="CSS"><label for="CSS"></label>CSS</input>
+    <input type="checkbox" name="interest" id="javascript"><label for="javascript"></label>javascript</input>
+  <br/><br/>
+
+  <textarea
+    placeholder="하고 싶은 말을 써주세요"
+    cols="30"
+    rows="10">
+  </textarea>
+<br />
+    <input type="submit"></input>
+    
   </body>
 </html>

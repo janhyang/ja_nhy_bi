@@ -1,0 +1,54 @@
+div{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; /* 배경 흰색 */
+}
+
+
+.profile{
+
+    width: 200px;
+    height: 200px;
+
+    background-image:url(/02.CSS/image/owl_image.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    background: 
+    linear-gradient(to right, #ff005d, #ff9900) border-box;
+    url(/02.CSS/image/owl_image.png) center/cover;
+    
+}
+
+
+
+/* background-clip: padding-box, border-box;
+    background-origin: border-box; */
+
+
+
+
+
+
+
+
+
+
+
+
+     /* border: 8px solid transparent; 투명한 경계 */
+    /* background-clip: padding-box, border-box; 두 레이어 적용 */
+    /* background-origin: border-box; 보더 기준 배경 이미지 */
+    /* background-clip: padding-box, border-box; 두 레이어 적용 */
+    /* background-origin: border-box; 보더 기준 배경 이미지 */
+    /* background: 
+        linear-gradient(to right, #ff005d, #ff9900) border-box, /* 외부 그라디언트 */
+        /* url('your-image.jpg') center / cover; 내부 이미지 */ 
+
+
+
+

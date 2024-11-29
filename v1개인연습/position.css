@@ -1,0 +1,45 @@
+div{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border: 1px solid black
+
+}
+
+
+
+.item1{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: static;
+    left: 30px;
+    bottom: 30px;
+
+}
+
+
+
+.item2{
+
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+  
+}
+
+
+
+.item3{
+    width: 100px;
+    height: 100px;
+
+    position: fixed;
+    background-color: gold;
+    right: 100px;
+    top: 100px;
+
+}

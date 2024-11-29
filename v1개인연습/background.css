@@ -1,0 +1,89 @@
+/* .background{
+    width: 800px;
+    height: 500px;
+    color: skyblue;
+} */
+
+/* .backgroundImage{
+    width: 800px;
+    height: 500px;
+    color: skyblue;
+
+
+    background-repeat: repeat-x;
+    background-image:url(/02.CSS/image/owl_image.png);
+    background-position: left,100px,bottom,30px
+} */
+
+/* .div{
+    width: 800px;
+    height: 500px;
+    color: skyblue;
+
+} */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* div 간 간격 */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f8ff; /* 하늘색 배경 */
+    height: 100vh;
+}
+
+.box {
+    width: 800px;
+    height: 500px;
+    background-color: #87ceeb; /* 하늘색 */
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+
+.box 
+    /* width: 800px;
+    height: 500px;
+    background-color: #87ceeb; /* 하늘색 */
+    /* border: 1px solid #ccc;
+    position: relative; */ */
+
+    .box1 {
+        background-image: url(/02.CSS/image/owl_image.png); /* 배경 이미지 경로 */
+        background-repeat: repeat-x; /* x축 반복 */
+        background-position: center center; /* 중앙 정렬 */
+        background-size: auto; /* 이미지 원래 크기 */
+}
+
+
+.box2 {
+   
+
+    /* background-image:url(/02.CSS/image/owl_image.png);
+    background-position: 100px 30px;
+    background-size: contain;
+    background-repeat: no-repeat; */
+
+    background-image: url(/02.CSS/image/owl_image.png); /* 배경 이미지 경로 */
+    background-repeat: no-repeat; /* 반복 없음 */
+    background-position: 100px 30px; /* 왼쪽에서 100px, 위에서 30px */
+    background-size: contain; /* 짧은 축에 맞춤 */
+}
+
+
+
+
+
+
+.box3{
+    
+    /* background-image:url(/02.CSS/image/owl_image.png);
+    background-position: 100px 30px;
+    background-size: cover;
+    background-repeat:  no-repeat; */
+
+    background-image: url(/02.CSS/image/owl_image.png); /* 배경 이미지 경로 */
+    background-repeat: no-repeat; /* 반복 없음 */
+    background-position: 50% 50%; /* 자유롭게 조정 가능 (중앙) */
+    background-size: cover; /* 긴 축에 맞춤 */
+}
