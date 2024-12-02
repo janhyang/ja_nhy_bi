@@ -171,58 +171,7 @@ while (number >= 1) {
 // 5 % 3  2(5를 3으로 나눈 나무지인 2의 값을 반환)
 
 
-// for(let i = 0; i <= 100; i++) {
-//     if ( number % 2 = 0 || number
-// }
-
-
-
-
-//Q) for 문을 활용한 별 찍기
-//
-
-// hint 1) prompt 사용해서 높이를 입력받기. - 10진수의 정수 (int)형 으로 형변환 할 것.
-// hint 2)각 줄의 내용을  저장할 문자열 변수 만들기
-// hint 3)문자열 과문자열을 더한다
-// hint 4)for문 중첩
-
-
-
-
-
-
-
-
-
-
-
-
-// 사용자 입력 받기
-let height = parseInt(prompt("별 찍기 높이를 입력하세요."));
-
-// 별 찍기 로직
-for (let i = 0; i < height; i++) {
-  let line = "";
-  for (let j = 0; j <= i; j++) {
-    line += "*";
-  }
-  console.log(line);
-}
-
-
-
-// height = int(input("별을 찍을 높이를 입력하세요: "))
-
-
-// for i in range(1, height + 1): 
-//     stars = "" 
-//     for j in range(i):  
-//         stars += "*"  
-//     print(stars)  
-
-
-
-
+// me
 
 
 // while (number <= 100) {  // 100까지 반복
@@ -233,3 +182,88 @@ for (let i = 0; i < height; i++) {
 // }
 
 // console.log("0부터 100까지의 2 또는 5의 배수 합은:", sum);
+
+/////////////////////////////////////////////////////
+
+
+
+//Q) for 문을 활용한 별 찍기
+//
+
+// hint 1) prompt 사용해서 높이를 입력받기. - 10진수의 정수 (int)형 으로 형변환 할 것.
+// hint 2) 각 줄의 내용을  저장할 문자열 변수 만들기
+// hint 3) 문자열과 문자열을 더한다
+// hint 4) for문 중첩
+
+
+
+
+
+// Q) for문을 활용한 별 찍기.
+// 결과 모습)
+/**
+ * h = 5 입력
+ *     *    // i = 1; / j = h-1 = 4 / k = 1
+ *    **    // i = 2; / j = h-2 = 3 / k = 2
+ *   ***    // i = 3; / j = h-3 = 2 / k = 3
+ *  ****
+ * *****    // i = 5; / j = h-5 = 0 / k = 5
+ */
+// Hint 1) prompt 사용해서 높이를 입력 받기. - 10진수의 정수(int)형으로 형변환 할 것.
+// Hint 2) 각 줄의 내용을 저장할 문자열 변수 만들기.
+// Hint 3) 문자열(" ") 과 문자열(*)을 더한다.
+// Hint 4) for문 중첩.
+
+const h = parseInt(prompt('높이를 입력하세요: '), 10);
+
+// 별 찍기
+for (let i = 1; i <= h; i++) {
+    let line = ''; // 각 줄의 내용을 저장할 문자열
+
+    // 공백 추가
+    for (let j = 1; j <= h - i; j++) {
+        line = line + ' ';
+    }
+    // line = "    "
+
+    // 별 추가
+    for (let k = 1; k <= i; k++) {
+        line = line + '*';
+    }
+    // line = "    *"
+
+    console.log(line);
+}
+// h = 5 입력 했을 가정)
+// i = 1 / j = 1 ~ 4 / k = 1 ====>        *
+// i = 2 / j = 1 ~ 3 / k = 2 ====>       **
+// i = 5 / j = 0 만족 x / k = 5 ====> *****
+
+
+
+
+
+
+
+
+// // 사용자 입력 받기
+// let height = parseInt(prompt("별 찍기 높이를 입력하세요."));
+
+// // 별 찍기 로직
+// for (let i = 0; i < height; i++) {
+//   let line = "";
+//   for (let j = 0; j <= i; j++) {
+//     line += "*";
+//   }
+//   console.log(line);
+// }
+
+
+
+
+
+
+
+
+
+
