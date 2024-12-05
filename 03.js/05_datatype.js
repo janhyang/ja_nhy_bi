@@ -190,17 +190,18 @@ console.log(typeof fruits); // Array? -> object
 console.log(typeof cat); // object -> object
 
 console.log('------------------');
+
 // 9. 형변환
 // 성적 평균 구하는 프로그램 만들기.
 // prompt() : JS에서 사용자로부터 입력을 받을 때 사용하는 브라우저 내장 함수.
 
 // JS가 자동형변환 해준 모습.
-// let mathScore = prompt('수학 점수 입력');
-// console.log('mathScore >>>> ', mathScore, typeof mathScore);
-// let engScore = prompt('영어 점수 입력');
-// console.log('engScore >>>> ', engScore, typeof engScore);
-// let avg = (mathScore + engScore) / 2;
-// console.log(`수학, 영어 평균점수는 ${avg}점 입니다.`);
+let mathScore = prompt('수학 점수 입력');
+console.log('mathScore >>>> ', mathScore, typeof mathScore);
+let engScore = prompt('영어 점수 입력');
+console.log('engScore >>>> ', engScore, typeof engScore);
+let avg = (mathScore + engScore) / 2;
+console.log(`수학, 영어 평균점수는 ${avg}점 입니다.`);
 
 // 명시적 형변환
 // #1. String() : 문자로 형변환.
@@ -231,26 +232,22 @@ console.log(Number(undefined), typeof Number(undefined)); // NaN, number
 // 정의 되지 않은 값이 숫자로 변환 될 수 없기 때문!
 console.log(Number(null), typeof Number(null)); // 0, number
 
-
-
+//////////////////////////////////////////////////////////////
 
 const person = {
-    name: "이몽룡",
+    name: '이몽룡',
     age: 18,
-    like: ["강아지", "고양이"],
+    like: ['강아지', '고양이'],
     isMarried: true,
     girlfriend: {
-        name: "성춘향",
-        age: 16
-    }
+        name: '성춘향',
+        age: 16,
+    },
 };
 
 console.log(person);
 
-
-
-
-
+//실습
 // 9. 형변환
 // 성적 평균 구하는 프로그램 만들기.
 // prompt() : JS에서 사용자로부터 입력을 받을 때 사용하는 브라우저 내장 함수.
@@ -263,8 +260,6 @@ console.log(person);
 // let avg = (mathScore + engScore) / 2;
 // console.log(`수학, 영어 평균점수는 ${avg}점 입니다.`);
 
-
-
 // let mathScore = prompt('77')
 // console.log('mathScore>', mathScore, typeof mathScore);
 
@@ -274,19 +269,6 @@ console.log(person);
 // let avg = (Number(mathScore) + Number(engScore)) / 2;
 
 // console.log(`시험 점수 평균점수는 ${avg}점 입니다.`);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // 변수 선언 및 값 할당
 // let mathScore = "77"; // 문자열
@@ -304,3 +286,9 @@ console.log(person);
 
 
 
+
+// const mathScore = '88';
+// const engScore = '77';
+
+// let avgScore = (Number(mathScore) + Number(engScore)) / 2;
+// console.log(avgScore);
